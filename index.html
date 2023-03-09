@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<link rel="stylesheet" href="css/index.css">
+
+    <title>calculadora</title>
+</head>
+<body>
+    <div id="app">
+        <div class="container-fluid my-5">
+            <div class="row justify-content-center">
+              <div class="rounded p-4 mt-md-5 my-sm-3 mx-3 bg-secondary mx-auto text-center col-xs-12 col-sm-8 col-md-7 col-lg-6 col-xl-4" id="calc">
+                <div class="row">
+                  <div class="screen bg-dark-subtle fw-bold">
+                    <p>{{equation}}</p>
+                    <p class="resultado">{{result}}</p>
+                  </div>
+                </div> 
+          
+                <div class="row">
+                  <div class="col-3 p-1" @click="clear()">
+                    <a class="btn btn-danger text-white btn-block" id="ac">AC</a>
+                  </div>
+                  <div class="col-3 p-1" @click="deleteLastCharacter()">
+                    <a class="btn btn-danger text-white btn-block" id="backspace">CE</a>
+                  </div>
+                </div>
+          
+                  <div class="row">
+                    <div class="col-3 p-1" @click="addCaractorToEquation(7)">
+                      <a class="number btn bg-dark text-white btn-block" id="7">7</a>
+                    </div>
+                    <div class="col-3 p-1" @click="addCaractorToEquation(8)">
+                      <a class="number btn bg-dark text-white btn-block" id="8">8</a>
+                    </div>
+                    <div class="col-3 p-1" @click="addCaractorToEquation(9)"> 
+                      <a class="number btn bg-dark text-white btn-block" id="9">9</a>
+                    </div>
+                    <div class="col-3 p-1" @click="addCaractorToEquation('/')">
+                      <a class="operator btn bg-dark btn-block text-danger" id="divide">/</a>
+                    </div>
+                  </div>
+          
+                  <div class="row">
+                    <div class="col-3 p-1" @click="addCaractorToEquation(4)">
+                      <a class="number btn bg-dark text-white btn-block" id="4">4</a>
+                    </div>
+                    <div class="col-3 p-1" @click="addCaractorToEquation(5)">
+                      <a class="number btn bg-dark text-white btn-block" id="5">5</a>
+                    </div>
+                    <div class="col-3 p-1" @click="addCaractorToEquation(6)">
+                      <a class="number btn bg-dark text-white btn-block" id="6">6</a>
+                    </div>
+                    <div class="col-3 p-1" @click="addCaractorToEquation('*')">
+                      <a class="operator btn bg-dark btn-block text-danger" id="times">*</a>
+                    </div>
+                  </div>
+          
+                  <div class="row">
+                    <div class="col-3 p-1" @click="addCaractorToEquation(1)">
+                      <a class="number btn bg-dark text-white btn-block " id="1">1</a>
+                    </div>
+                    <div class="col-3 p-1" @click="addCaractorToEquation(2)">
+                      <a class="number btn bg-dark text-white btn-block" id="2">2</a>
+                    </div>
+                    <div class="col-3 p-1" @click="addCaractorToEquation(3)">
+                      <a class="number btn bg-dark text-white btn-block" id="3">3</a>
+                    </div>
+                    <div class="col-3 p-1" @click="addCaractorToEquation('-')">
+                      <a class="operator btn bg-dark btn-block text-danger" id="minus">-</a>
+                    </div>
+                  </div>
+          
+                  <div class="row">
+                    <div class="col-3 p-1" @click="addCaractorToEquation(0)">
+                      <a class="number btn bg-dark text-white btn-block" id="0">0</a>
+                    </div>
+                    
+                    <div class="col-3 p-1" @click="showResult()">
+                      <a class="btn bg-dark btn-block text-danger" id="equal">=</a>
+                    </div>
+                    <div class="col-3 p-1" @click="addCaractorToEquation('+')">
+                      <a class="operator btn bg-dark btn-block text-danger" id="plus">+</a>
+                    </div>
+                  </div>
+          
+               </div>
+            </div>
+          </div>
+    </div>
+
+
+    <script src="js/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+body {
+    font-family: Orbitron, Sans-serif;
+    margin-bottom: 60px;
+  }
+  a, button{
+    width: 100%;
+  }
+  .screen p{
+    margin: 1rem;
+    text-align: right;
+    font-family: 'Orbitron', sans-serif;
+    
+  }
+  #display{
+    height: 40px;
+    border-radius: 5px;
+    text-align: right;
+   }
+   /*Hides spiner*/
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+  }
+  
+  .clickable {
+    pointer-events : auto;
+    cursor: pointer;
+  }
+  .unclickable {
+    pointer-events: none;
+  }
