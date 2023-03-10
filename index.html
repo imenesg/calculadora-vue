@@ -13,14 +13,14 @@
     <title>calculadora</title>
 </head>
 <body>
-    <div id="app">
-        <div class="container-fluid my-5">
+    <div id="app" class="d-flex align-items-center">
+        <div class="container-fluid">
             <div class="row justify-content-center">
               <div class="rounded p-4 mt-md-5 my-sm-3 mx-3 bg-secondary mx-auto text-center col-xs-12 col-sm-8 col-md-7 col-lg-6 col-xl-4" id="calc">
                 <div class="row">
                   <div class="screen bg-dark-subtle fw-bold">
                     <p>{{equation}}</p>
-                    <p class="resultado">{{result}}</p>
+                    <p class="resultado fs-1">{{result}}</p>
                   </div>
                 </div> 
           
@@ -81,6 +81,9 @@
                   <div class="row">
                     <div class="col-3 p-1" @click="addCaractorToEquation(0)">
                       <a class="number btn bg-dark text-white btn-block" id="0">0</a>
+                    </div>
+                    <div class="col-3 p-1" @click="addCaractorToEquation('.')">
+                      <a class="btn bg-dark btn-block text-danger" id="dot">.</a>
                     </div>
                     
                     <div class="col-3 p-1" @click="showResult()">

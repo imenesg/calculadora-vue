@@ -1,12 +1,25 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
-
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+#app{
+  padding-inline: 1rem;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(113, 112, 112, 0.379);
+}
 body {
     font-family: Orbitron, Sans-serif;
-    margin-bottom: 60px;
   }
   a, button{
     width: 100%;
+  }
+  .screen{
+    margin-bottom: 1rem;
+    border-radius: .25rem;
   }
   .screen p{
     margin: 1rem;
@@ -14,22 +27,9 @@ body {
     font-family: 'Orbitron', sans-serif;
     
   }
-  #display{
-    height: 40px;
-    border-radius: 5px;
-    text-align: right;
-   }
    /*Hides spiner*/
   input::-webkit-outer-spin-button,
   input::-webkit-inner-spin-button {
       -webkit-appearance: none;
       margin: 0;
-  }
-  
-  .clickable {
-    pointer-events : auto;
-    cursor: pointer;
-  }
-  .unclickable {
-    pointer-events: none;
   }
